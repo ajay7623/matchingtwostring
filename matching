@@ -1,0 +1,49 @@
+
+import java.util.Scanner;
+class Ajay {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.nextLine();
+        String str2 = sc.nextLine();
+        String temp1="";
+        String temp2="";
+        
+        int lenA = str1.length();
+        int lenB = str2.length();
+        int flag=0;
+        for(int i=0;i<lenA;i++){
+           for(int j=0;j<lenB;j++){
+               if(str1.charAt(i)==str2.charAt(j)){
+                   flag++;
+               }
+           }
+           if(flag==0){
+               temp1=temp1+str1.charAt(i);
+           }
+           flag=0;
+       }
+       for(int i=0;i<lenB;i++){
+           for(int j=0;j<lenA;j++){
+               if(str2.charAt(i)==str1.charAt(j)){
+                   flag++;
+               }
+           }
+           if(flag==0){
+               temp2=temp2+str2.charAt(i);
+           }
+           flag=0;
+       }
+       if(temp1==""){
+           System.out.println("<null>");
+       }
+       else{
+           System.out.println(temp1);
+       }
+       if(temp2==""){
+           System.out.println("<null>");
+       }
+       else{
+           System.out.println(temp2);
+       }
+    }
+}
