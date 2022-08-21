@@ -47,3 +47,25 @@ class Ajay {
        }
     }
 }
+
+
+
+
+
+
+
+
+list1=["U1,U2","U3,U4","U1,U5","U2,U1","U3,U4"]
+ 
+list2= map(lambda each:each.strip('"'), list1)
+ 
+temp=[]
+ 
+for i in list2:
+ 
+
+                temp.append(i.split(',')) 
+ 
+print(temp)
+ 
+print(set(tuple(sorted(i)) for i in temp))
